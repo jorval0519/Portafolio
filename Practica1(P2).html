@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFL Online</title>
+    <style>
+        body {
+            padding: 200px;
+            background-color: rgb(228, 77, 77);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header img {
+            margin-left: 20px;
+        }
+        form {
+            display: flex;
+            justify-content: space-between;
+        }
+        fieldset {
+            border: 2px solid;
+            padding: 10px;
+            width: 50%;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            padding: 5px;
+            margin-bottom: 10px;
+            size: 20;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Tienda Online NFL Compras online</h1>
+        <img src="NFL.png" width="150">
+    </div>
+ 
+
+    <form>
+        <fieldset>
+            <legend>Información general del cliente</legend>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre"  required>
+
+            <label for="apellido_paterno">Apellido paterno:</label>
+            <input type="text" id="apellido_paterno" >
+
+            <label for="apellido_materno">Apellido materno:</label>
+            <input type="text" id="apellido_materno" >
+
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" id="usuario"  required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password"  required>
+
+            <label for="fecha_registro">Fecha de registro:</label>
+            <input type="date" id="fecha_registro"></br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Datos para facturar</legend>
+            <label for="pais">País:</label>
+            <select id="pais">
+                <option>México</option>
+                <option>Canadá</option>
+                <option>Reino Unido</option>
+            </select>
+
+            <label for="ciudad">Ciudad:</label>
+            <select id="ciudad">
+                <option>San Luis Potosí</option>
+                <option>Monterrey</option>
+                <option>Cd. Valles</option>
+            </select>
+
+            <label for="numero_casa">Número de casa:</label>
+            <input type="number" id="numero_casa" >
+
+            <label for="colonia">Colonia:</label>
+            <input type="text" id="colonia" >
+
+            <label for="cp">C.P.:</label>
+            <input type="text" id="cp" >
+
+            <label for="calle">Calle:</label>
+            <input type="text" id="calle" >
+
+            <label for="rfc">R.F.C.:</label>
+            <input type="text" id="rfc"  required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email"  required>
+
+            <label for="terminos">
+                <input type="checkbox" id="terminos"> Acepto términos y condiciones
+            </label>
+        </fieldset>
+    </form>
+
+    <p style="text-align: center;">
+        <input type="submit" value="Enviar">
+    </p>
+
+    <p style="text-align: left;">Febrero 2025, SLP.</p>
+</body>
+</html>
+
+
