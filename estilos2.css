@@ -1,0 +1,43 @@
+ul{
+    list-style-type: none;
+    width: 30%;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid rgb(252, 4, 86);
+}
+li a{
+    background-color: rgba(247, 4, 117, 0.493);
+    color: white;
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: rgba(247, 4, 117, 0.315);
+}
+li .activo{
+    background-color: rgba(247, 4, 117, 0.315);
+    color: rgb(252, 4, 140);
+}
+
+
+
+
+
+
+/*Lo mio*/
+body{
+    background-color: black;
+}
+h1{
+    color: rgb(252, 4, 86);
+}
+p{
+    color: white;
+}
+h4{
+    color: white;
+}
+address{
+    color: white;
+}
