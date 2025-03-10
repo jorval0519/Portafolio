@@ -1,0 +1,43 @@
+body{
+    background-color: black
+}
+table{
+    width: 90%;
+    border: 2px solid rgb(39, 171, 175);
+    border-collapse: collapse;
+    caption-side: top;
+    margin: auto;
+}
+td,th{
+    border: 1px solid rgb(65, 127, 209);
+    color: white;
+}
+table tr:nth-child(odd){
+    background-color: rgba(37, 131, 134, 0.438);
+}
+table tr:nth-child(even){
+    background-color: rgba(61, 132, 226, 0.432);
+}
+table tr th{
+    background-color: rgba(27, 191, 197, 0.548);
+}
+table tr:hover{
+    background-color: rgba(61, 132, 226, 0.432);
+}
+
+li a{
+
+}
+
+
+
+
+
+
+/*Lo que yo puse*/
+h1{
+    color: rgb(37, 131, 134);
+}
+caption{
+    color: rgb(67, 129, 211)
+}
