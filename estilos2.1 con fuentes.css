@@ -1,0 +1,74 @@
+.capa1{
+    margin-left: 25%;
+    padding: 12px;
+}
+ul{
+    list-style-type: none;
+    width: 24%;
+    height: 95%;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid rgb(255, 0, 85);
+    background-color: rgb(255, 0, 85);
+    position: fixed;
+}
+li a{
+    background-color: rgb(255, 0, 85);
+    color: white;
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color: rgba(150, 4, 247, 0.247);
+}
+li .activo{
+    background-color: rgba(109, 4, 53, 0.63);
+    color: rgb(252, 4, 140);
+}
+h1{
+    font-family: "Honk", system-ui;
+}
+h2{
+    font-family: "Big Shoulders Stencil", sans-serif;
+}
+@font-face{
+    font-family:"fuente1";
+    src: url("Big_Shoulders_Inline/BigShouldersInline-VariableFont_opsz,wght.ttf")format("truetype");
+}
+@font-face{
+    font-family: "fuente2";
+    src: url("Reem_Kufi_Ink/ReemKufiInk-Regular.ttf")format("truetype");
+}
+p{
+    font-family: "fuente1";
+    font-size: 12px;
+}
+.t2{
+    font-family: "fuente2";
+    font-size: 16px;
+}
+
+
+
+
+
+/*Lo mio*/
+body{
+    background-color: black;
+}
+h1{
+    color: rgb(252, 4, 86);
+}
+h2{
+    color: white;
+}
+p{
+    color: white;
+}
+h4{
+    color: white;
+}
+address{
+    color: white;
+}
