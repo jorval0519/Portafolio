@@ -1,0 +1,106 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  padding: 20px;
+  background-color: #000000;
+}
+h1{
+  font-family: "Limelight", sans-serif;
+  text-align: center;
+  color: #444444;
+  margin-bottom: 40px;
+}
+section{
+  margin-bottom: 50px;
+}
+h2{
+  font-family: "Limelight", sans-serif;
+  color: #444444;
+  margin-bottom: 20px;
+  border-bottom: 2px solid;
+  padding-bottom: 5px;
+  
+}
+.box{
+  font-family: "Limelight", sans-serif;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.etiqueta{
+  font-family: "Limelight", sans-serif;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #444444;
+}
+/* Unidades Absolutas */
+.px{
+  width: 300px;
+  height: 100px;
+  background: #6cf436;
+}
+.cm{
+  width: 5cm;  
+  height: 2cm;  
+  background: #6cf436;
+}
+.mm{
+  width: 50mm; 
+  height: 20mm; 
+  background: #6cf436;
+}
+.in{
+  width: 2in;  
+  height: 1in;  
+  background: #6cf436;
+}
+.pt{
+  width: 100pt;
+height: 72pt; 
+background: #6cf436;
+}
+.pc{
+  width: 10pc; 
+  height: 5pc;  
+  background: #6cf436;
+}
+.em{
+  width: 20em;
+  height: 5em; 
+  background: #9403f4;
+}
+.rem{
+  width: 25rem;
+  height: 6rem;
+  background: #9403f4;
+}
+.porcentaje {
+  width: 80%;
+  height: 80px;
+  background: #9403f4;
+}
+.vw{
+  width: 50vw;
+  height: 10vh;
+  background: #9403f4;
+}
+.vh{
+  width: 60vw;
+  height: 15vh;
+  background: #9403f4;
+}
+.vmin{
+  width: 20vmin;
+  height: 20vmin;
+  background: #9403f4;
+}
+.vmax{
+  width: 20vmax;
+  height: 20vmax;
+  background: #9403f4;
+}
