@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="barra-superior">
+  <div class="info-contacto">
+    <span>📧 contacto@pawi.com</span>
+    <span>📞 444 123 4567</span>
+  </div>
+  <div class="info-usuario">
+    <a id="enlace-sesion" href="login.html">Iniciar sesión</a>
+  </div>
+</div>
+
+
+
+  <header>
+    <h1>Iniciar Sesión</h1>
+  </header>
+
+  <main>
+    <form onsubmit="iniciarSesion(); return false;">
+      <input type="text" id="nombre" placeholder="Ingresa tu nombre" required>
+      <button type="submit">Iniciar sesión</button>
+    </form>
+    <p id="mensajeBienvenida"></p>
+  </main>
+
+  <script>
+    function iniciarSesion() {
+      const nombre = document.getElementById("nombre").value.trim();
+      if (nombre !== "") {
+        localStorage.setItem("usuario", nombre);
+        alert("Sesión iniciada como " + nombre);
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 3000);
+      } else {
+        alert("Por favor, escribe tu nombre.");
+      }
+    }
+  </script>
+
+</body>
+</html>

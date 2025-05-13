@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="carrito-titulo">🛒 Carrito de Compras</h1>
+  <div id="lista-carrito" class="contenedor-productos"></div>
+
+  <!-- Botón de Comprar -->
+  <div id="boton-comprar" class="boton-comprar-container">
+    <button onclick="comprar()">Comprar</button>
+  </div>
+
+  <script>
+    const contenedor = document.getElementById("lista-carrito");
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    if (carrito.length === 0) {
+      contenedor.innerHTML = "<p style='text-align:center;'>Tu carrito está vacío.</p>";
+    } else {
+      carrito.forEach((item, index) => {
+        const div = document.createElement("div");
+        div.className = "producto";
+        div.innerHTML = `
+          <h3>${item.nombre}</h3>
+          <p>Precio: MXN${item.precio}</p>
+          <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
+        `;
+        contenedor.appendChild(div);
+      });
+    }
+
+    function eliminarDelCarrito(indice) {
+      carrito.splice(indice, 1);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      location.reload();
+    }
+
+    // Función para redirigir a la página de compra
+    function comprar() {
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío. No puedes proceder a la compra.");
+      } else {
+        window.location.href = "pedido.html"; // Aquí debes redirigir a la página de pago
+      }
+    }
+  </script>
+  
+</body>
+</html>

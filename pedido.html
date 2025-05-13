@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmar Pedido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="pedido-titulo">🛒 Confirmar Pedido</h1>
+
+  <!-- Resumen del carrito -->
+  <div id="resumen-pedido" class="contenedor-productos"></div>
+
+  <!-- Formulario de datos de contacto -->
+  <div class="formulario-pedido">
+    <h2>Datos de contacto</h2>
+    <form id="form-pedido">
+      <input type="text" id="nombre" placeholder="Nombre Completo" required>
+      <input type="email" id="email" placeholder="Correo Electrónico" required>
+      <input type="tel" id="telefono" placeholder="Teléfono" required>
+      <textarea id="direccion" placeholder="Dirección de Envío" required></textarea>
+      <button type="submit">Confirmar Compra</button>
+    </form>
+  </div>
+
+  <script>
+    const resumen = document.getElementById("resumen-pedido");
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+    if (carrito.length === 0) {
+      resumen.innerHTML = "<p style='text-align:center;'>Tu carrito está vacío.</p>";
+    } else {
+      let total = 0;
+      carrito.forEach((item) => {
+        const div = document.createElement("div");
+        div.className = "producto";
+        div.innerHTML = `
+          <h3>${item.nombre}</h3>
+          <p>Precio: MXN${item.precio}</p>
+        `;
+        resumen.appendChild(div);
+        total += item.precio;
+      });
+
+      // Agregar total al resumen
+      const totalDiv = document.createElement("div");
+      totalDiv.innerHTML = `<h3>Total: MXN${total}</h3>`;
+      resumen.appendChild(totalDiv);
+    }
+
+    // Enviar formulario y mostrar mensaje
+    document.getElementById("form-pedido").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById("nombre").value;
+      const email = document.getElementById("email").value;
+      const telefono = document.getElementById("telefono").value;
+      const direccion = document.getElementById("direccion").value;
+
+      // Aquí puedes guardar la información o hacer algo con los datos, como enviar un email o almacenar en un sistema.
+      alert(`Gracias por tu compra, ${nombre}! Hemos recibido tu pedido. Te contactaremos en ${email}.`);
+
+      // Limpiar el carrito después de la compra
+      localStorage.removeItem("carrito");
+
+      // Redirigir al usuario a una página de confirmación o inicio
+      window.location.href = "gracias.html";  // O cualquier página de confirmación
+    });
+  </script>
+
+</body>
+</html>

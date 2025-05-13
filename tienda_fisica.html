@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pawi Miniaturas - Tienda Física</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="barra-superior">
+  <div class="info-contacto">
+    <span>📧 contacto@pawi.com</span>
+    <span>📞 444 123 4567</span>
+  </div>
+  <div class="info-usuario">
+    <a href="carrito.html" class="icono-carrito"><i class="fas fa-shopping-cart"></i></a>
+    <a id="enlace-sesion" href="login.html">Iniciar sesión</a>
+  </div>
+</div>
+
+
+  <!-- Barra secundaria -->
+  <div class="barra-secundaria">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="historia.html">Ayuda</a></li>
+      <li><a href="tienda.html">Tienda Física</a></li>
+    </ul>
+  </div>
+
+  <div class="contenido-tienda">
+    <h1 class="titulo-principal">Visita nuestra tienda física</h1>
+    <p class="texto-ubicacion">
+      📍 Dirección:<br>
+      <span class="link-direccion" onclick="mostrarMapa()">C. Independencia 950, Centro Historico, 78000 San Luis, S.L.P., México</span>
+    </p>
+
+    <div id="mapa" class="mapa-google" style="display: none;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3695.342329474497!2d-100.982237526165!3d22.15103754829195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842aa3d8b0ae5c63%3A0x9353fc53249c7aeb!2sPawi%20Miniaturas!5e0!3m2!1ses-419!2smx!4v1747109399189!5m2!1ses-419!2smx"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <script>
+    // Mostrar mapa al hacer clic
+    function mostrarMapa() {
+      document.getElementById("mapa").style.display = "block";
+    }
+
+    // Nombre del usuario si está logueado
+    window.onload = function () {
+      const usuario = localStorage.getItem("usuario");
+      const enlaceSesion = document.getElementById("enlace-sesion");
+
+      if (usuario) {
+        enlaceSesion.textContent = usuario;
+        enlaceSesion.href = "#";
+        enlaceSesion.onclick = function () {
+          if (confirm("¿Cerrar sesión?")) {
+            localStorage.removeItem("usuario");
+            window.location.reload();
+          }
+        };
+      }
+    };
+  </script>
+
+</body>
+</html>
