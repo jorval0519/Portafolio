@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnóstico de Matemáticas</title>
+    <link rel="stylesheet" href="formulario de diagnóstico.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <h1>Diagnóstico: Operaciones Matemáticas Básicas</h1>
+    <form id="formulario">
+        <div class="pregunta">
+            <label>1. ¿Cuánto es 100 + 200?</label><br>
+            <input type="number" name="p1">
+        </div>
+
+        <div class="pregunta">
+            <label>2. ¿Cuánto es 5 * 10?</label><br>
+            <input type="number" name="p2">
+        </div>
+
+        <div class="pregunta">
+            <label>3. ¿Cuánto es 30 - 10?</label><br>
+            <input type="number" name="p3">
+        </div>
+
+        <div class="pregunta">
+            <label>4. ¿Cuánto es 20 / 2?</label><br>
+            <input type="number" name="p4">
+        </div>
+
+        <div class="pregunta">
+            <label>5. ¿Cuánto es 90 + 100?</label><br>
+            <input type="number" name="p5">
+        </div>
+
+        <button type="button" onclick="evaluar()">Enviar</button>
+    </form>
+
+    <div id="resultado"></div>
+    <canvas id="grafico" width="400" height="200"></canvas>
+    <button onclick="generarPDF()">Descargar PDF</button>
+
+    <script src="formulario de diagnóstico.js"></script>
+</body>
+</html>
