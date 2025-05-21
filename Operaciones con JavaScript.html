@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Operaciones con JavaScript</title>
-    <script type="text/JavaScript" src="Operaciones con JavaScript.js"></script>
+    <script defer src="Operaciones con JavaScript.js"></script>
 </head>
 <body>
     <h1>Operaciones</h1>
     <form>
         <label for="num1">Escribe un número:</label>
         <input type="text" name="num1" id="num1" placeholder="Escribe un número"><br/><br/>
-        <label for="num2">Escribe un número:</label>
+
+        <label for="num2">Escribe otro número:</label>
         <input type="text" name="num2" id="num2" placeholder="Escribe un número"><br/><br/>
-        <input type="button" name="suma" id="suma" value="Suma" onclick="sumar()">
-        <input type="button" name="resta" id="resta" value="Resta" onclick="restar()">
-        <input type="button" name="multiplica" id="multiplica" value="Multiplica" onclick="multiplicar()">
-        <input type="button" name="divide" id="divide" value="Divide" onclick="dividir()">
+
+        <input type="button" id="suma" value="Suma" onclick="sumar()">
+        <input type="button" id="resta" value="Resta" onclick="restar()">
+        <input type="button" id="multiplica" value="Multiplica" onclick="multiplicar()">
+        <input type="button" id="divide" value="Divide" onclick="dividir()">
     </form>
-    El resultado es:
-    <p id="r"></p>
+
+    <p><strong>El resultado es:</strong></p>
+    <p id="r" style="font-weight: bold; font-size: 1.2em;"></p>
 </body>
 </html>
