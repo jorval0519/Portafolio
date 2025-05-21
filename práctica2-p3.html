@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="stylep2-p3.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Limelight&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+	<title>Lectura de formulario con JavaScript</title>
+
+	<script type="text/javascript" src="formsjava.js">
+		
+	</script>
+
+</head>
+<body>
+	<h1>Registro de usuario</h1>
+
+	<form name="formulario">
+		<label for="user">Nombre:</label>
+		<input type="text" name="user" id="user">
+		<br/>
+		<label for="password">Password</label>
+		<input type="password" name="pass" id="pass">
+		<br/>
+
+		<select name="carrera" id="carrera">
+			<option value="ITI">Ing. en Tegnologías de la Información</option>
+			<option value="ITEM">Ing. Telemática</option>
+		</select><br/>
+		<input type="radio" name="genero" id="genero" value="f">
+		<label for="genero">Femenino</label>
+		<input type="radio" name="genero" id="genero" value="m">
+		<label for="genero">Masculino</label>
+		<input type="button" name="envio" id="envio" value="Leer datos" onclick="leer()">
+		
+	</form>
+
+	<h2>Tus datos son:</h2>
+	<div id="resultado"></div>
+
+</body>
+</html>
